@@ -10,7 +10,7 @@ try {
 		e.printStackTrace();
 	}
 	
-	String url = "jdbc:sqlserver://localhost:1433;database=Assignment2;";
+	String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Demo Database NAV (5-0);";
 	String user = "EmelieJavaSQL";	
 	String pass = "panda3"; 
 	
@@ -21,8 +21,6 @@ try {
 	Connection con = DriverManager.getConnection(url, user, pass);
 	String query = "SELECT * FROM DEMO DATATBASE NAV (5-0);";
 	PreparedStatement ps = con.prepareStatement(query);
-	 
-	
 	ResultSet rs = ps.executeQuery();
 	
 	while(rs.next()) {
